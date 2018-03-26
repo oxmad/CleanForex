@@ -1,0 +1,457 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #fff
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+section
+	background-color: #fff
+
+.header
+	padding-top: 50px
+	min-height: 700px
+	min-height: 800px
+	background-size: cover
+	background-attachment: fixed
+	&__text
+		margin: 0
+		margin: 16px 0 39px 0
+		&-box
+			text-align: center
+	&__title
+		color: #fff
+		font-size: 52px
+		font-weight: 300
+		line-height: 1.2
+		margin: 0
+		margin-top: 90px
+
+.bg-light
+	background-color: #fff !important
+
+.text
+	color: rgba(255, 255, 255, 0.8)
+	&--spaced
+		text-transform: uppercase
+		font-weight: 300
+		letter-spacing: 0.25em
+	&--red
+		color: $red
+	&--green
+		color: $accent
+
+.container
+	margin: 0 auto
+
+.nav
+	&-link
+		margin: 0 5px
+	&bar 
+		min-height: 100px
+		&__img
+			height: 53px
+
+.menu-nav 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+
+.dropdown
+	&-item:active
+		background-color: $accent
+	&-toggle::after
+		color: $accent
+		position: absolute
+		top: 18px
+		right: 1px
+
+.btn 
+	font-size: 12px
+	font-family: $default-font
+	font-weight: 500
+	&__reg
+		font-size: 14px
+		width: 125px
+		color: $accent
+		border-color: $accent
+		&:hover
+			background: $accent
+		&:hover,
+		&:visited,
+		&:focus
+			border-color: $accent
+			box-shadow: none !important
+			outline: none
+		&:active
+			background-color: darken($accent, 5%) !important
+	&-success
+		min-width: 200px
+		min-height: 50px
+		background-color: $accent
+		border-color: $accent
+		box-shadow: none
+		text-transform: uppercase
+		&:hover,
+		&:visited,
+		&:focus
+			border-color: $accent
+			box-shadow: none !important
+			outline: none
+		&:hover
+			background-color: lighten($accent, 5%)
+		&:active
+			background-color: darken($accent, 5%) !important
+	&--white
+		min-width: 200px
+		min-height: 50px
+		border: 1px solid #fff
+		background-color: transparent
+		color: #fff
+		outline: none
+		transition: background-color color 0.3s ease
+		&:hover,
+		&:visited,
+		&:focus
+			background-color: #fff
+			color: #000	
+			box-shadow: none !important
+			outline: none
+		&:active
+			background-color: transparent
+			color: #fff
+
+.link
+	color: $accent
+	text-transform: uppercase
+	transition: color .3s ease
+	&:hover
+		color: lighten($accent, 5%)
+		text-decoration: none
+
+.title
+	font-size: 50px
+	font-weight: bold
+
+.advantages
+	margin-top: 80px
+	&__img
+		width: 40px
+		height: 40px
+	&__title
+		color: #fff
+		margin: 23px 0 16px 0
+		font-size: 14px
+		letter-spacing: 0.27em
+	&__text
+		padding-right: 10px
+	&__item
+		padding: 0
+
+.acc-types
+	padding-top: 70px
+	padding-bottom: 75px
+	&__title
+		text-align: center
+		margin-bottom: 34px
+	&__text
+		font-size: 12px
+		font-weight: 300
+		&-box
+			margin-top: 47px
+			text-align: center
+
+
+.card
+	text-align: center
+	border-radius: 0
+	padding: 30px
+	margin-bottom: 20px
+	&--favorite::after
+		content: ""
+		position: absolute
+		top: 0
+		right: 30px
+		width: 40px
+		height: 49px
+		background-image: url('../img/bookmark.png')
+		background-size: contain
+	&__name
+		margin: 35px 0 23px 0 
+		font-size: 48px
+		line-height: 1em
+		color: $accent
+		text-transform: uppercase
+		font-weight: bold
+	&__line
+		margin: 0
+		padding-bottom: 56px
+		border-bottom: 1px solid #EAEAEA
+	&__box
+		margin-top: 31px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	&__options
+		text-align: left
+		margin-bottom: 6px
+	&__value
+		text-align: right
+	&__btn
+		margin-top: 22px
+		height: 50px
+		border-color: $accent
+		color: $accent
+		&:hover,
+		&:visited,
+		&:focus
+			border-color: $accent
+			box-shadow: none !important
+			outline: none
+		&:hover
+			background-color: lighten($accent, 5%)
+		&:active
+			background-color: darken($accent, 5%) !important
+
+.table td,
+.table th,
+	border-color: transparent
+
+.table td
+	padding: 0
+
+.table thead th
+	border-bottom: none
+	padding: 0
+	padding-bottom: 25px
+
+.tools
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	min-height: 629px
+	background-size: cover
+	background-position: 0 0
+	background-attachment: fixed
+	&__description 
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		justify-content: center
+	&__title
+		color: #fff
+	&__link
+		text-align: right
+	&__text
+		font-size: 12px
+	&__converter-box
+		padding: 30px
+		margin-bottom: 20px
+	&__converter-box, .table-box
+		background-color: rgba(#fff, 0.1)
+	
+.table
+	&__text
+		line-height: 2
+	&-box
+		padding: 30px
+
+.converter
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 20px
+	&__text
+		font-size: 50px
+		color: #fff
+		font-weight: bold
+		line-height: 1
+	&__item
+		width: 227px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__select
+		width: 93px 
+		height: 50px
+		padding-left: 10px
+		font-size: 16px
+		font-weight: 300
+	&__value
+		width: 100%
+		height: 50px
+		font-size: 24px
+		font-weight: 300
+		color: #fff
+		border-top: 1px solid rgba(255, 255, 255, 0.6)
+		border-left: 1px solid rgba(255, 255, 255, 0.6)
+		border-bottom: 1px solid rgba(255, 255, 255, 0.6)
+		background-color: transparent
+		text-align: center
+
+.news
+	padding: 69px 0 100px 0
+	&__title
+		margin-bottom: 43px
+		letter-spacing: -1.3px
+
+
+.article
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	&__date
+		font-size: 14px
+		font-weight: 300
+		margin-bottom: 2px
+	&__title
+		color: $accent
+		font-weight: 300
+		font-size: 28px
+		letter-spacing: -0.5px
+		line-height: 1.15
+		margin-bottom: 20px
+
+.invite 
+	padding: 70px 0 70px 0
+	background-size: cover
+	background-attachment: fixed
+	&__title
+		color: #fff
+	&__btn-box
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	&__btn
+		margin-right: 20px
+
+.footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	padding: 70px 0 100px 0
+	background-color: #000
+	&__item-box
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;	
+		flex-direction: column;
+	&__title
+		color: #fff
+		font-size: 14px
+		margin-bottom: 30px
+	&__list
+		list-style: none
+		padding: 0
+	&__link
+		display: inline-block
+		text-decoration: none;
+		transition: color 0.3s ease
+		&:hover
+			color: #fff
+			text-decoration: none
+	&__tel
+		color: $accent
+		&:hover
+			color: lighten($accent, 5%)
+
+.soc 
+	width: 110px
+	height: 18px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	&__link
+		display: inline-block
+		background-size: contain
+		background-repeat: no-repeat
+	&--fb
+		width: 9px
+		height: 17px
+		background-image: url("../img/fb.png")
+	&--tw
+		width: 20px
+		height: 17px
+		background-image: url("../img/tw.png")
+	&--ln
+		width: 17px
+		height: 17px
+		background-image: url("../img/ln.png")
+	&--vk
+		width: 24px
+		height: 14px
+		background-image: url("../img/vk.png")
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+
+@import "media" // Always at the end
